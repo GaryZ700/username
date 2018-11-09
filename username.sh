@@ -11,11 +11,12 @@ echo "3. Must be between 3 and 12 characters in length."
 echo "Please enter a password: "
 read password
 
-while echo $password | egrep -v "^[0-9_a-z]{5}$" > /dev/null 2>&1
+while echo $password | egrep -v "^[a-z]{1}[a-z_0-9]{2,11}$" > /dev/null 2>&1
 do
 	echo "You must enter a valid password!!"
 	echo "Please enter a password: "
 	read password
 done
+
 echo "Thank you"
 
